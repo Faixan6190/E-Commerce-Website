@@ -4,7 +4,7 @@ import Image2 from "../../assets/hero/shopping.png";
 import Image3 from "../../assets/hero/sale.png";
 import Slider from "react-slick";
 
-const Hero = () => {
+const Hero = ({ handleOrderPopup }) => {
   const ImageList = [
     {
       id: 1,
@@ -62,7 +62,10 @@ const Hero = () => {
                     {data.description}
                   </p>
                   <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <button className="bg-gradient-to-r from-primary to to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                    <button
+                      onClick={handleOrderPopup}
+                      className="bg-gradient-to-r from-primary to to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                    >
                       Order Now
                     </button>
                   </div>
